@@ -33,9 +33,6 @@ pyaes==1.6.1
 
 pyparsing==3.0.9
 
-
-pyromod==2.0.0
-
 PySocks==1.7.1
 
 python-dotenv==1.0.0
