@@ -12,10 +12,7 @@ async def Start_msg(bot: stark , m: Message):
     await bot.send_photo(
     m.chat.id,
     photo="https://telegra.ph/file/cef3ef6ee69126c23bfe3.jpg",
-    caption = "**Hi i am All in One Extractor Bot**.\n"
-                            
-           
-
+    caption = "**Hi i am All in One Extractor Bot**.
 
 @stark.on_message(filters.command(["restart"]) & ~filters.edited)
 async def restart_handler(_, m):
