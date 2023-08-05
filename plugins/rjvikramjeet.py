@@ -98,9 +98,8 @@ async def account_login(bot: Client, m: Message):
         }
     await editable.edit("**login Successful**")
     cour_url = "https://rgvikramjeetapi.classx.co.in/get/mycourse?userid="
-    try:
-        res1 = s.get(cour_url + userid, headers=hdr1)
-        b_data = res1.json()['data']
+    res1 = s.get(cour_url + userid, headers=hdr1)
+    b_data = res1.json()['data']
     cool = ""
     for data in b_data:
       t_name =data['course_name']
