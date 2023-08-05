@@ -44,19 +44,20 @@ import logging
 import os
 import sys
 import re
+from urllib.parse import urlencode
 from pyrogram import Client as bot
 import cloudscraper
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from base64 import b64encode, b64decode
 def decode(tn):
-  key = "638udh3829162018".encode("utf8")
-  iv = "fedcba9876543210".encode("utf8")
-  ciphertext = bytearray.fromhex(b64decode(tn.encode()).hex())
-  cipher = AES.new(key, AES.MODE_CBC, iv)
-  plaintext = unpad(cipher.decrypt(ciphertext), AES.block_size)
-  url=plaintext.decode('utf-8')
-  return url
+    key = "638udh3829162018".encode("utf8")
+    iv = "fedcba9876543210".encode("utf8")
+    ciphertext = bytearray.fromhex(b64decode(tn.encode()).hex())
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    plaintext = unpad(cipher.decrypt(ciphertext), AES.block_size)
+    url = plaintext.decode('utf-8')
+    return url.strip()
 @bot.on_message(filters.command(["rgvikramjeet"]) & ~filters.edited)
 async def account_login(bot: Client, m: Message):
     s = requests.Session()
@@ -97,8 +98,9 @@ async def account_login(bot: Client, m: Message):
         }
     await editable.edit("**login Successful**")
     cour_url = "https://rgvikramjeetapi.classx.co.in/get/mycourse?userid="
-    res1 = s.get("https://rgvikramjeetapi.classx.co.in/get/mycourse?userid="+userid, headers=hdr1)
-    b_data = res1.json()['data']
+    try:
+        res1 = s.get(cour_url + userid, headers=hdr1)
+        b_data = res1.json()['data']
     cool = ""
     for data in b_data:
       t_name =data['course_name']
@@ -170,7 +172,7 @@ async def account_login(bot: Client, m: Message):
                 tn = (data["download_link"])
                 tid = (data["Title"])
                 url = decode(tn)
-                videos_dict[tid] = url
+                videos_dict[tid] = url.strip()
                 mtext = f"{tid}:{url}\n"
                 open(f"{mm} - {course_title}.txt", "a").write(mtext)
               output_dict[t_name] = videos_dict   
