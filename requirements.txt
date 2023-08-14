@@ -1,6 +1,6 @@
 pyrogram==1.4.16
 tgcrypto==1.2.2
-requests
+
 pyromod==1.5
 ffmpeg
 mediainfo
@@ -37,7 +37,7 @@ pyparsing==3.0.9
 
 python-dotenv==1.0.0
 
-requests==2.26.0
+requests==2.31.0
 
 requests-toolbelt==0.10.1
 
