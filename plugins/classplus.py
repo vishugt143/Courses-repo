@@ -32,10 +32,17 @@ from Crypto.Util.Padding import unpad
 from base64 import b64encode, b64decode
 
 
-@bot.on_message(filters.command(["classplus"]) & ~filters.edited)
+@Client.on_message(
+    filters.private
+    & filters.command(['classplus'])
+)
 async def account_login(bot: Client, m: Message):
     global cancel
     cancel = False
+    s = requests.Session()
+    editable = await m.reply_text("**Send Token from ClassPlus App**")
+    input1: Message = await bot.listen(editable.chat.id)
+    raw_text0 = input1.text
 async def classplus(client, message):
 
     def get_course_content(session, course_id, folder_id=0):
