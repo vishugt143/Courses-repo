@@ -32,10 +32,10 @@ from Crypto.Util.Padding import unpad
 from base64 import b64encode, b64decode
 
 
-@Client.on_message(
-    filters.private
-    & filters.command(['classplus'])
-)
+@bot.on_message(filters.command(["classplus"]) & ~filters.edited)
+async def account_login(bot: Client, m: Message):
+    global cancel
+    cancel = False
 async def classplus(client, message):
 
     def get_course_content(session, course_id, folder_id=0):
