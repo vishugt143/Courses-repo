@@ -61,7 +61,7 @@ async def account_login(bot: Client, m: Message):
     'authority': 'api.classplusapp.com',
     'accept': 'application/json, text/plain, */*',
     'accept-language': 'en',
-    'api-version': '28',
+    'api-version': '35',
     'cache-control': 'no-cache',
     'device-id': '516',
     'origin': 'https://web.classplusapp.com',
