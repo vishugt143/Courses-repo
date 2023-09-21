@@ -2,7 +2,7 @@
 {
     "name": "Allinonebot",
     "description": "ALLINONEBOT",
-    "repository": "https://github.comt-",
+    "repository": "https://github.com/pjvip/all-in-work-final",
     "keywords": [
         "telegram bot",
         "pyrogram"
@@ -10,17 +10,17 @@
     "env": {
             "API_ID": {
             "description": "Your API_ID from https://my.telegram.org/apps",
-            "value": "20717621",
+            "value": "10551685",
             "required": true
         },
         "API_HASH": {
             "description": "Your API_HASH from https://my.telegram.org/apps",       
-            "value": "a68af155e7f0c79b1baab1f185f4181d",
+            "value": "477dff815fdc7cba803c1bc02c459d03",
             "required": true
         },
         "BOT_TOKEN": {
             "description": "Your Bot token from @Botfather",
-            "value": "6518790189:AAH18Rn2TSpRV2cDrFVF-Ruqy9CrChZ-F1s",
+            "value": "6400468647:AAGzWdp0hHnPvwPol7iXQ-NlABDXCNcWIyY",
             "required": true
         }
     }
