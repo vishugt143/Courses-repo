@@ -67,7 +67,7 @@ async def account_login(bot: Client, m: Message):
         "deviceModel": "Realme RMX2001",
         "deviceVersion": "R(Android 11.0)",
         "email": "",
-        "deviceToken": "fYdfgaUaQZmYP7vV4r2rjr:APA91bFPn3Z4m_YS8kYQSthrueUh-lyfxLghL9ka-MT0m_4TRtlUu7cy90L8H6VbtWorg95Car6aU9zjA-59bZypta9GNNuAdUxTnIiGFxMCr2G3P4Gf054Kdgwje44XWzS9ZGa4iPZh"
+        "deviceToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTUzNDkwMjQsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiYm5kaVJrbEplbXRQZFVGeWEzVXlSakZpZFRaVGR6MDkiLCJmaXJzdF9uYW1lIjoiU1RFM1NuVnpXR05TTVVvelpuQTBPRzQ1U3pSRFFUMDkiLCJlbWFpbCI6IlVXWk5WbGRuWlVOa2IwRlhWRk01T1RKR1ExSnNWbE14VFVjemVFNVZaVzgyY0hWM09VUXdjVzlMV1QwPSIsInBob25lIjoiY25FMlZHZHFiSHBFV0ZsS1QxTXlkV0Y0UkdNNFp6MDkiLCJyZWZlcnJhbF9jb2RlIjoiTkdGdVNqVjFURWhyY2pkYVF6azNOV1ZLY2psNFVUMDkifX0.VE_Bc1_N9XajDU3epKN3TEb_6ukrlDwadUSKG5vCulMI1Xt5jSAI4KVkpiuVrvq8cRwDg0cVYZluxVE05v90G-j1opzHKhqvMIfHBv95oyrXfI-Kb-qpiU9ce3jGyBWqTaQ0iAevelzZlntswIwZhgOyA4AUt0E1sK42hZasTISOf4UPyeis4B-jkpWgISEdb_JrCsphZmEkvSaNmGkEnFzb_vasTMycugQNX8K696t4usJYWDFvyOAPtfsxBkWRb0zu7C6i-g_GLQ9M8nP52VbokOfc-y2LnQiw1C-gv1qlkIEbMVeooWRKU8CizkBAKuWIszlZKV9GuDtc-QRazA"
        }
     headers = {
         "Host": "elearn.crwilladmin.com",
