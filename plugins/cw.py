@@ -59,7 +59,7 @@ async def account_login(bot: Client, m: Message):
     global cancel
     cancel = False
 
-    url = "https://elearn.crwilladmin.com/api/v1/login-other//"
+    url = "https://elearn.crwilladmin.com/api/v3/login-other"
     data = {
         "deviceType": "android",
         "password": "",
@@ -67,25 +67,24 @@ async def account_login(bot: Client, m: Message):
         "deviceModel": "Realme RMX2001",
         "deviceVersion": "R(Android 11.0)",
         "email": "",
-        "deviceToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTUzNDkwMjQsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiYm5kaVJrbEplbXRQZFVGeWEzVXlSakZpZFRaVGR6MDkiLCJmaXJzdF9uYW1lIjoiU1RFM1NuVnpXR05TTVVvelpuQTBPRzQ1U3pSRFFUMDkiLCJlbWFpbCI6IlVXWk5WbGRuWlVOa2IwRlhWRk01T1RKR1ExSnNWbE14VFVjemVFNVZaVzgyY0hWM09VUXdjVzlMV1QwPSIsInBob25lIjoiY25FMlZHZHFiSHBFV0ZsS1QxTXlkV0Y0UkdNNFp6MDkiLCJyZWZlcnJhbF9jb2RlIjoiTkdGdVNqVjFURWhyY2pkYVF6azNOV1ZLY2psNFVUMDkifX0.VE_Bc1_N9XajDU3epKN3TEb_6ukrlDwadUSKG5vCulMI1Xt5jSAI4KVkpiuVrvq8cRwDg0cVYZluxVE05v90G-j1opzHKhqvMIfHBv95oyrXfI-Kb-qpiU9ce3jGyBWqTaQ0iAevelzZlntswIwZhgOyA4AUt0E1sK42hZasTISOf4UPyeis4B-jkpWgISEdb_JrCsphZmEkvSaNmGkEnFzb_vasTMycugQNX8K696t4usJYWDFvyOAPtfsxBkWRb0zu7C6i-g_GLQ9M8nP52VbokOfc-y2LnQiw1C-gv1qlkIEbMVeooWRKU8CizkBAKuWIszlZKV9GuDtc-QRazA"
-       }
+        "deviceToken": "yJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTU0NTMwODcsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiYm5kaVJrbEplbXRQZFVGeWEzVXlSakZpZFRaVGR6MDkiLCJmaXJzdF9uYW1lIjoiU1RFM1NuVnpXR05TTVVvelpuQTBPRzQ1U3pSRFFUMDkiLCJlbWFpbCI6IlVXWk5WbGRuWlVOa2IwRlhWRk01T1RKR1ExSnNWbE14VFVjemVFNVZaVzgyY0hWM09VUXdjVzlMV1QwPSIsInBob25lIjoiY25FMlZHZHFiSHBFV0ZsS1QxTXlkV0Y0UkdNNFp6MDkiLCJyZWZlcnJhbF9jb2RlIjoiTkdGdVNqVjFURWhyY2pkYVF6azNOV1ZLY2psNFVUMDkifX0.WguPbZAF-3FkbxGddLbGhMogV_V2AWXIK_5I7EO30hgtLFa93vCQPdAvPHCteCxoI5_aIA_hEPlAukjgYC4qbf75mWcI8YIIEtowfu2E5DK5x-Qo-X9tnDUjmrJDyv9iX4eGKbpPc3cbg5MKgSOiwQpJDqHvjImtU5Fgwk_idt-6mStKM8-Hz6_i4guh8VHNQzqrLOZ2-U50ofYjaTrwWizkINvYRkt1oiMs0VVO4oAPhQbdNxjdD4BvII4h43u-o3MqAEftodOGJhfTuS_ys8CW6Uai9fwL_dd0dJ8DfpgCpUyTDCGddQk6-KGC9zHI3HzY1FcmcB9mSATrdWKt9A"          }
     headers = {
         "Host": "elearn.crwilladmin.com",
         "Token": "",
-        "Usertype": "",
+        "Usertype": "2",
         "Appver": "1.55",
         "Apptype": "android",
-        "Content-Type": "application/json; charset=UTF-8",
+        "Content-Type": "application/x-www-form-urlencoded",
         "Content-Length": "313",
-        "Accept-Encoding": "gzip, deflate",
-        "user-agent": "okhttp/5.0.0-alpha.2",
+        "Accept-Encoding": "gzip, deflate, br",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
         'Connection': 'Keep-Alive'
        }
-    proxy_host = ['47.254.153.200:80']
-    proxies = {
-           'https': proxy_host,
-           'http': proxy_host,
-       }
+    #proxy_host = ['47.254.153.200:80']
+    #proxies = {
+     #       'https': proxy_host,
+     #       'http': proxy_host,
+     #   }
     editable = await m.reply_text("Send **ID & Password** in this manner otherwise bot will not respond.\n\nSend like this:-  **ID*Password** \n or \nSend **TOKEN** like This this:-  **TOKEN**" )
     input1: Message = await bot.listen(editable.chat.id)
     raw_text = input1.text
@@ -94,7 +93,7 @@ async def account_login(bot: Client, m: Message):
       data["email"] = raw_text.split("*")[0]
       data["password"] = raw_text.split("*")[1]
       await input1.delete(True)
-      s = requests.Session()
+      #s = requests.Session()
       response = s.post(url = url, headers=headers, json=data, timeout=10)
       if response.status_code == 200:
           data = response.json()
@@ -106,7 +105,7 @@ async def account_login(bot: Client, m: Message):
       await m.reply_text(f"```{token}```")
     else:
       token = raw_text
-    html1 = s.get("https://elearn.crwilladmin.com/api/v1/comp/my-batch?&token=" + token).json()
+    html1 = s.get("https://elearn.crwilladmin.com/api/v3/comp/my-batch?&token=" + token).json()
     topicid = html1["data"]["batchData"]
     cool=""
     for data in topicid:
@@ -122,7 +121,7 @@ async def account_login(bot: Client, m: Message):
     editable1= await m.reply_text("**Now send the Batch ID to Download**")
     input2 = message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
-    html2 = s.get("https://elearn.crwilladmin.com/api/v1/comp/batch-topic/"+raw_text2+"?type=class&token="+token).json()
+    html2 = s.get("https://elearn.crwilladmin.com/api/v3/comp/batch-topic/"+raw_text2+"?type=class&token="+token).json()
     topicid = html2["data"]["batch_topic"]
     bn = html2["data"]["batch_detail"]["name"]
     vj=""
@@ -146,7 +145,7 @@ async def account_login(bot: Client, m: Message):
         t_name=(data["topicName"].replace(" ",""))
         tid = (data["id"])
         scraper = cloudscraper.create_scraper()
-        ffx = s.get("https://elearn.crwilladmin.com/api/v1/comp/batch-detail/"+raw_text2+"?redirectBy=mybatch&topicId="+tid+"&token="+token).json()
+        ffx = s.get("https://elearn.crwilladmin.com/api/v3/comp/batch-detail/"+raw_text2+"?redirectBy=mybatch&topicId="+tid+"&token="+token).json()
             #ffx = json.loads(html3)
         vcx =ffx["data"]["class_list"]["batchDescription"]
         vvx =ffx["data"]["class_list"]["classes"]
@@ -176,7 +175,7 @@ async def account_login(bot: Client, m: Message):
 
             #gettting all json with diffrent topic id https://elearn.crwilladmin.com/api/v1/comp/batch-detail/881?redirectBy=mybatch&topicId=2324&token=d76fce74c161a264cf66b972fd0bc820992fe57
             #scraper = cloudscraper.create_scraper()
-            html4 = s.get("https://elearn.crwilladmin.com/api/v1/comp/batch-detail/"+raw_text2+"?redirectBy=mybatch&topicId="+t+"&token="+token).content
+            html4 = s.get("https://elearn.crwilladmin.com/api/v3/comp/batch-detail/"+raw_text2+"?redirectBy=mybatch&topicId="+t+"&token="+token).content
             ff = json.loads(html4)
             #vc =ff.json()["data"]["class_list"]["batchDescription"]
             mm = ff["data"]["class_list"]["batchName"].replace("/ "," ")
@@ -202,7 +201,7 @@ async def account_login(bot: Client, m: Message):
                             video_url = video_source["src"]
                             #print(video_url)
                             #scraper = cloudscraper.create_scraper()
-                            html5 = s.get("https://elearn.crwilladmin.com/api/v1/livestreamToken?type=brightcove&vid="+vidid+"&token="+token).content
+                            html5 = s.get("https://elearn.crwilladmin.com/api/v3/livestreamToken?type=brightcove&vid="+vidid+"&token="+token).content
                             surl = json.loads(html5)
                             stoken = surl["data"]["token"]
                             #print(stoken)
@@ -222,7 +221,7 @@ async def account_login(bot: Client, m: Message):
                             video_url1 = video_source1["src"]
                             #print(video_url)
                             #scraper = cloudscraper.create_scraper()
-                            html8 = s.get("https://elearn.crwilladmin.com/api/v1/livestreamToken?type=brightcove&vid="+vidid+"&token="+token).content
+                            html8 = s.get("https://elearn.crwilladmin.com/api/v3/livestreamToken?type=brightcove&vid="+vidid+"&token="+token).content
                             surl1 = json.loads(html8)
                             stoken1 = surl1["data"]["token"]
                             #print(stoken)
@@ -251,7 +250,7 @@ async def account_login(bot: Client, m: Message):
         raw_text5 = input5.text
         if raw_text5 == 'y':
             scraper = cloudscraper.create_scraper()
-            html7 = scraper.get("https://elearn.crwilladmin.com/api/v1/comp/batch-notes/"+raw_text2+"?topicid="+raw_text2+"&token="+token).content
+            html7 = scraper.get("https://elearn.crwilladmin.com/api/v3/comp/batch-notes/"+raw_text2+"?topicid="+raw_text2+"&token="+token).content
             pdfD=json.loads(html7)
             k=pdfD["data"]["notesDetails"]
             bb = len(pdfD["data"]["notesDetails"])
@@ -276,3 +275,4 @@ async def account_login(bot: Client, m: Message):
     except Exception as e:
         print(str(e))
     await m.reply_text("Done")
+
