@@ -61,12 +61,12 @@ async def account_login(bot: Client, m: Message):
     'authority': 'api.classplusapp.com',
     'accept': 'application/json, text/plain, */*',
     'accept-language': 'en',
-    'api-version': '35',
+    'api-version': '39',
     'cache-control': 'no-cache',
     'device-id': '516',
-    'origin': 'https://web.classplusapp.com',
+    'origin': 'https://course-overview.classplusapp.com',
     'pragma': 'no-cache',
-    'referer': 'https://web.classplusapp.com/',
+    'referer': 'https://course-overview.classplusapp.com/',
     'region': 'IN',
     'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
     'sec-ch-ua-mobile': '?0',
@@ -74,11 +74,11 @@ async def account_login(bot: Client, m: Message):
     'sec-fetch-dest': 'empty',
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-site',
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+    'user-agent': 'Mobile-Android',
     'x-access-token':f'{raw_text0}'
 }
     
-    resp = s.get('https://api.classplusapp.com/v2/batches/details?limit=20&offset=0&sortBy=createdAt', headers=headers)
+    resp = s.get('https://api.classplusapp.com/v2/course/get?limit=10&offset=0&sortBy=createdAt', headers=headers)
     if resp.status_code==200:
         pass
     else:
