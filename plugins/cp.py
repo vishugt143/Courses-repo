@@ -56,7 +56,7 @@ async def account_login(bot: Client, m: Message):
     s = requests.Session()
     editable = await m.reply_text("**Send Token from ClassPlus App**")
     input1: Message = await bot.listen(editable.chat.id)
-    raw_text0 = eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6ODU0ODUyMzIsIm9yZ0lkIjo2MzA0OCwidHlwZSI6MSwibW9iaWxlIjoiOTE5OTI1ODU1MzE2IiwibmFtZSI6IlBBTktBSiBCQVJJQSIsImVtYWlsIjoicGJhcmlhMzE4QGdtYWlsLmNvbSIsImlzSW50ZXJuYXRpb25hbCI6MCwiZGVmYXVsdExhbmd1YWdlIjoiRU4iLCJjb3VudHJ5Q29kZSI6IklOIiwiY291bnRyeUlTTyI6IjkxIiwidGltZXpvbmUiOiJHTVQrNTozMCIsImlzRGl5IjpmYWxzZSwib3JnQ29kZSI6ImpwY3p6IiwiZmluZ2VycHJpbnRJZCI6ImNiMTJkZmRiMzljNjM4MWM1NzllOTY4MDBhNzQ5MTU0IiwiaWF0IjoxNjk1ODk0NzE4LCJleHAiOjE2OTY0OTk1MTh9.CKpFNRuUK11G0yncv9qMcm4U5a2bSCJzU_S7ClZzM38I015fgOE7EV3fmwpOPoTY
+    raw_text0 = input1.text
     headers = {
     'authority': 'api.classplusapp.com',
     'accept': 'application/json, text/plain, */*',
