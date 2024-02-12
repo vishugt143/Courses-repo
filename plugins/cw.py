@@ -98,6 +98,7 @@ async def account_login(bot: Client, m: Message):
       response = s.post(url = url, headers=headers, json=data, timeout=10)
       if response.status_code == 200:
           data = response.json()
+          print(data)
           token = data["data"]["token"]
           await m.reply_text(token)
       else:
