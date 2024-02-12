@@ -89,7 +89,9 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Send **ID & Password** in this manner otherwise bot will not respond.\n\nSend like this:-  **ID*Password** \n or \nSend **TOKEN** like This this:-  **TOKEN**" )
     input1: Message = await bot.listen(editable.chat.id)
     raw_text = input1.text
+    print(input1.txt)
     s = requests.Session()
+    print(s)
     if "*" in raw_text:
       data["email"] = raw_text.split("*")[0]
       data["password"] = raw_text.split("*")[1]
@@ -99,6 +101,7 @@ async def account_login(bot: Client, m: Message):
       if response.status_code == 200:
           data = response.json()
           print(data)
+          print(response)
           token = data["data"]["token"]
           await m.reply_text(token)
       else:
